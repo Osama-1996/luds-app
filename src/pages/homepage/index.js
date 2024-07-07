@@ -154,7 +154,7 @@ const HomePage = () => {
                     Your browser does not support the video tag.
                 </video>
                 <div className="absolute inset-0 bg-black opacity-50"></div>
-                <div className="relative z-10 flex flex-col  justify-center h-full text-white px-[80px]" data-aos="fade-right">
+                <div className="relative z-10 flex flex-col  justify-center h-full text-white px-[80px]" data-aos="zoom-in-up">
                     <h1 className="text-5xl font-[500]">Level Up Design Studios</h1>
                     <p className="text-[18px] font-[400] my-7">Focus on your business and let us take care of all your editing and animation needs.</p>
                     <div>
