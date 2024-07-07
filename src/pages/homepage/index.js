@@ -101,7 +101,7 @@ const HomePage = () => {
                                     className="block pt-2 px-1 text-[#ffffff] hover:text-[#ffffff] hover:border-b-4 border-b-4 border-transparent hover:border-[#901854] font-[700]"
                                     aria-current="page"
                                 >
-                                    Home
+                                    About Us
                                 </a>
                             </li>
                             <li>
@@ -109,7 +109,7 @@ const HomePage = () => {
                                     href="#products"
                                     className="block pt-2 px-1 text-[#ffffff] hover:text-[#ffffff] hover:border-b-4 border-b-4 border-transparent hover:border-[#901854] font-[700]"
                                 >
-                                    Windows
+                                    Services
                                 </a>
                             </li>
                             <li>
@@ -117,7 +117,7 @@ const HomePage = () => {
                                     href="#products"
                                     className="block pt-2 px-1 text-[#ffffff] hover:text-[#ffffff] hover:border-b-4 border-b-4 border-transparent hover:border-[#901854] font-[700]"
                                 >
-                                    Doors
+                                    Our Work
                                 </a>
                             </li>
                             <li>
@@ -125,7 +125,7 @@ const HomePage = () => {
                                     href="#products"
                                     className="block pt-2 px-1 text-[#ffffff] hover:text-[#ffffff] hover:border-b-4 border-b-4 border-transparent hover:border-[#901854] font-[700]"
                                 >
-                                    Products
+                                    Our Process
                                 </a>
                             </li>
                             <li>
@@ -133,7 +133,7 @@ const HomePage = () => {
                                     href="#services"
                                     className="block pt-2 px-1 text-[#ffffff] hover:text-[#ffffff] hover:border-b-4 border-b-4 border-transparent hover:border-[#901854] font-[700]"
                                 >
-                                    Services
+                                    Blog
                                 </a>
                             </li>
                         </ul>
