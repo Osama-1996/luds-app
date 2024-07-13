@@ -15,12 +15,20 @@ import TechnologyStacks from "./pages/technologyStack"
 import MeetingDate from './pages/meetingDate';
 import Contactus from './pages/contactUs';
 import Footer from './components/footer';
+import AnimatedCursor from "react-animated-cursor"
 function App() {
   useEffect(() => {
-    AOS.init({ duration: 1500 });
+    AOS.init({ duration: 1600 });
   }, []);
   return (
-    < >
+    <div style={{ cursor: 'default',overflowX:"hidden" }}>
+      <AnimatedCursor
+        innerSize={20}
+        outerSize={20}
+        color='193, 11, 111'
+        outerAlpha={0.2}
+        innerScale={0.7}
+        outerScale={5} />
       <Header />
       <HomePage />
       <CreativeHiring />
@@ -31,8 +39,8 @@ function App() {
       <TechnologyStacks />
       <MeetingDate />
       <Contactus />
-      <Footer/>
-    </>
+      <Footer />
+    </div>
   );
 }
 

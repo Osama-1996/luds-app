@@ -3,14 +3,14 @@ import React from 'react';
 const CreativeHiring = () => {
     return (
         <div className="py-16  flex flex-col xl:flex-row lg:flex-row md:flex-row sm:flex-col xs:flex-col items-center justify-center min-h-screen bg-gradient-to-b from-black to-[#3D155F] ps-12 pe-7">
-            <div className=" w-[40%] rounded-lg  h-[550px] me-8   mt-5">
+            <div className="w-[90%] md:w-[40%] rounded-lg h-[400px] md:h-[550px] me-8   mt-5" data-aos="zoom-in-down">
                 <img
                     src="https://via.placeholder.com/600x400"
                     alt="Placeholder"
                     className=" h-full object-cover rounded-lg w-full"
                 />
             </div>
-            <div className="flex flex-col justify-center text-white py-12 w-full  md:w-[60%] px-4">
+            <div className="flex flex-col justify-center text-white py-12 w-full  md:w-[60%] px-4" data-aos="fade-left">
                 <h1 className="text-[#911A57] text-2xl xl:text-[40px] lg:text-4xl md:text-3xl sm:text-2xl xs:text-2xl font-[800] mb-4">
                     Hiring the right creative for your business is tough right?
                 </h1>

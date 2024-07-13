@@ -38,14 +38,14 @@ const ProblemSolution = () => {
     return (
         <div className="min-h-screen bg-black text-white px-8 py-16 ">
             <div className="max-w-5xl mx-auto">
-                <div className="mb-12">
+                <div className="mb-12" data-aos="flip-down">
                     <div className='bg-[#911A57] flex justify-between px-11 '>
                         <h2 className="text-[22px] md:text-[34px] lg:text-[44px] xl:text-[54px] font-[600] mb-2">Problem</h2>
                         <h1 className='text-[22px] md:text-[34px] lg:text-[44px] xl:text-[54px] font-[600] mb-2'>?</h1>
                     </div>
-                    <div className="flex  bg-black border-4 border-[#911A57] p-4 rounded-lg shadow-md">
+                    <div className="flex flex-col md:flex-row justify-center bg-black border-4 border-[#911A57] py-10 px-4 rounded-lg shadow-md">
 
-                        <div className="lg:w-[32%] me-2 p-1 bg-[#911A57]">
+                        <div className=" lg:w-[32%] me-2 p-1 bg-[#911A57]">
                             <img src='https://via.placeholder.com/150' alt="" className=" mb-4 lg:mb-0 w-full h-64 object-cover" />
                         </div>
                         <div className="lg:w-[67%] px-4 text-center lg:text-left">
@@ -59,26 +59,26 @@ const ProblemSolution = () => {
                     </div>
                 </div>
                 {steps.map((step, index) => (
-                    <div key={index} className="mb-12">
+                    <div key={index} className="mb-12 relative" data-aos="flip-up">
                         <div className='flex justify-between'>
                             {(index === 0 || index === 2) ? (
                                 <>
-                                    <h2 className="text-[45px] font-[600] bg-[#911A57] py-3 px-5">{step.step}</h2>
-                                    <img src={Bulb} alt='' className='absolute right-[180px]' />
+                                    <h2 className="text-[28px] sm:text-[45px] font-[600] bg-[#911A57] py-3 px-5">{step.step}</h2>
+                                    <img src={Bulb} alt='' className='absolute mt-[-26px] sm:mt-[0px] right-[10px] sm:right-[60px]' />
                                 </>
                             ) : (
                                 <>
-                                    <img src={Bulb} alt='' className='absolute left-[180px]' />
+                                    <img src={Bulb} alt='' className='absolute mt-[-26px] sm:mt-[0px] left-[10px] sm:left-[60px]' />
                                     <div className='flex justify-end w-full'>
-                                        <h2 className=" text-end text-[45px] font-[600] bg-[#911A57] py-3 px-5">{step.step}</h2>
+                                        <h2 className=" text-end text-[28px]  sm:text-[45px] font-[600] bg-[#911A57] py-3 px-5">{step.step}</h2>
                                     </div>
 
                                 </>
                             )}
                         </div>
-                        <div className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center bg-black border-4 border-[#911A57] p-4 rounded-lg shadow-md`}>
+                        <div className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center bg-black border-4 border-[#911A57] py-8 px-4 rounded-lg shadow-md`}>
                             <div className="lg:w-[40%] p-4">
-                                <img src={step.image} alt={step.title} className="rounded-lg mb-4 lg:mb-0 w-full h-64 object-cover" />
+                                <img src={step.image} alt={step.title} className="rounded-lg mb-4 lg:mb-0 w-full h-[300px] object-cover" />
                             </div>
                             <div className="lg:w-[60%] p-4 text-center lg:text-left">
                                 <div className="relative mb-4">

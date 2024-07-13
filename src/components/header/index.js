@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import Logo from "../../assets/images/logo.png"
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -7,7 +7,7 @@ const Header = () => {
     <nav className="w-full bg-transparent absolute z-20 top-0">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-3 px-4">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          {/* <img src={Logo} className="h-8" alt="Logo" /> */}
+          <img src={Logo} className="w-[160px] h-[80px]" alt="Logo" />
         </a>
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           <div className="flex">
@@ -47,7 +47,7 @@ const Header = () => {
         </div>
         <div
           className={`items-center justify-between ${
-            menuOpen ? "block" : "hidden"
+            menuOpen ? "block bg-black" : "hidden"
           } w-full md:flex md:w-auto md:order-1 ps-2`}
           id="navbar-sticky"
         >
