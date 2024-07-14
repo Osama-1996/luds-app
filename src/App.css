@@ -36,3 +36,74 @@
     transform: rotate(360deg);
   }
 }
+@keyframes text-reveal {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.button {
+  position: relative;
+  overflow: hidden;
+}
+
+.button-text {
+  display: inline-block;
+  transition: transform 0.5s cubic-bezier(0.46, 0.4, 0.56, 0.87), opacity 0.5s cubic-bezier(0.46, 0.4, 0.56, 0.87);
+}
+
+.button:hover .button-text {
+  animation: text-reveal 0.5s cubic-bezier(0.46, 0.4, 0.56, 0.87) forwards;
+}
+/* Add this to your CSS file or inside a <style> tag in your component */
+
+.nav-link {
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  background-color: #911A57;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease-in-out;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+@keyframes text-reveal {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.button {
+  position: relative;
+  overflow: hidden;
+}
+
+.button-text {
+  display: inline-block;
+  transition: transform 0.5s cubic-bezier(0.46, 0.4, 0.56, 0.87), opacity 0.5s cubic-bezier(0.46, 0.4, 0.56, 0.87);
+}
+
+.button:hover .button-text {
+  animation: text-reveal 0.5s cubic-bezier(0.46, 0.4, 0.56, 0.87) forwards;
+}

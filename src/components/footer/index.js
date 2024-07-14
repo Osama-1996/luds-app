@@ -9,7 +9,7 @@ const Footer = () => {
                     {/* Left Column */}
                     <div className="lg:w-1/2 mb-8 lg:mb-0">
                         <h2 className="text-[40px] font-[700] mb-4">Tell us about your project</h2>
-                        <button className="bg-[#FFFFFF66] text-[23px] font-[500] text-[#121519] px-10 py-2 rounded-full mb-8">Say Hi!</button>
+                        <button className="button bg-[#FFFFFF66] text-[23px] font-[500] text-[#121519] px-10 py-2 rounded-full mb-8"><span className='button-text'>Say Hi!</span> </button>
                         <hr className="border-[#FFFFFF66] mb-8" />
                         <h3 className="text-[45px] font-[500] mb-9">Our offices</h3>
                         <p className="text-[35px] font-[600]">Pakistan</p>

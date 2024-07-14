@@ -30,7 +30,7 @@ const teamMembers = [
 
 const TeamSection = () => {
     return (
-        <div className="flex flex-col items-center bg-gradient-to-b from-black to-purple-900 py-12">
+        <div className="flex flex-col items-center bg-[#911A57] py-12">
             <h2 className="border-b-4 border-[#911A57] text-white text-3xl xl:text-5xl lg:text-5xl md:text-4xl sm:text-3xl xs:text-3xl font-bold mb-14 mt-3" data-aos="fade-down">
                 OUR TEAM
             </h2>
@@ -51,9 +51,9 @@ const TeamSection = () => {
                         <div className="flex flex-col p-4">
                             <h3 className="text-[20px] sm:text-[25px] md:text-[28px] lg:text-[32px] xl:text-[35px] font-[700] text-white mb-2 text-center">{member.title}</h3>
                             <p className="text-[15px] font-[300] text-white mb-4 text-center">{member.description}</p>
-                            <button className="flex items-center bg-[#333333] text-[16px] font-[600] text-white px-4 py-2 rounded-full hover:bg-gray-700 mx-auto">
-                                {member.buttonText}
-                                <div className='rounded-full bg-[#727272] p-1 ms-2'>
+                            <button className="button flex items-center bg-[#333333] text-[16px] font-[600] text-white px-4 py-2 rounded-full hover:bg-gray-700 mx-auto">
+                              <span className="button-text"> {member.buttonText}</span> 
+                                <div className='rounded-full bg-[#727272] p-1 ms-2 button-text'>
                                     <img src={Arrow} alt='Arrow' />
                                 </div>
                             </button>

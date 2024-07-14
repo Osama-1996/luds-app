@@ -4,7 +4,7 @@ const Contactus = () => {
             <h1 className="text-[26px] md:text-[45px] font-[800] text-white mt-16" data-aos="zoom-in">NEED HELP?</h1>
             <h1 className="text-[25px] md:text-[36px] font-[500] text-white" data-aos="zoom-in">DON’T WORRY JUST <span className="text-[#911A57]">CONTACT US</span> </h1>
             <div className="flex flex-col md:flex-row">
-                <form className=" mt-6 md:mt-0 p-0 md:p-8 rounded-xl shadow-md w-full md:w-[50%] " data-aos="zoom-in">
+                <form className=" mt-6 md:mt-0 p-0 md:py-8 rounded-xl shadow-md w-full md:w-[40%] " data-aos="zoom-in">
                     <div className="mb-6">
 
                         <input
@@ -34,9 +34,9 @@ const Contactus = () => {
                     </div>
                     <button
                         type="submit"
-                        className="w-full bg-[#D9D9D9] rounded-xl p-4 flex items-center justify-center text-gray-700 font-bold hover:bg-gray-300 focus:outline-none"
+                        className="button w-full bg-[#D9D9D9] rounded-xl p-4 flex items-center justify-center text-gray-700 font-bold hover:bg-gray-300 focus:outline-none"
                     >
-                        Submit
+                       <span className="button-text">Submit</span> 
                     </button>
                 </form>
                 <div className="w-full md:w-[50%]">

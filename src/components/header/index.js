@@ -1,5 +1,6 @@
 import { useState } from "react";
-import Logo from "../../assets/images/logo.png"
+import Logo from "../../assets/images/logo.png";
+
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -14,9 +15,9 @@ const Header = () => {
             <a href="#products">
               <button
                 type="button"
-                className="text-[#ffffff] bg-[#5f6464] focus:outline-none font-medium rounded-full text-md px-7 py-1 text-center border-2 border-[#5f6464]"
+                className="button text-[#ffffff] bg-[#5f6464] focus:outline-none font-medium rounded-full text-md px-7 py-1 text-center border-2 border-[#5f6464]"
               >
-                Contact Us
+                <span className="button-text">Contact Us</span>
               </button>
             </a>
           </div>
@@ -55,7 +56,7 @@ const Header = () => {
             <li>
               <a
                 href="#home"
-                className="block pt-2 px-1 text-[#ffffff] hover:text-[#ffffff] border-b-4 border-transparent hover:border-[#911A57] font-[700]"
+                className="nav-link block pt-2 px-1 text-[#ffffff] hover:text-[#ffffff] border-b-4 border-transparent  font-[700]"
                 aria-current="page"
               >
                 About Us
@@ -64,7 +65,7 @@ const Header = () => {
             <li>
               <a
                 href="#products"
-                className="block pt-2 px-1 text-[#ffffff] hover:text-[#ffffff] border-b-4 border-transparent hover:border-[#911A57] font-[700]"
+                className="nav-link block pt-2 px-1 text-[#ffffff] hover:text-[#ffffff] border-b-4 border-transparent  font-[700]"
               >
                 Services
               </a>
@@ -72,7 +73,7 @@ const Header = () => {
             <li>
               <a
                 href="#products"
-                className="block pt-2 px-1 text-[#ffffff] hover:text-[#ffffff] border-b-4 border-transparent hover:border-[#911A57] font-[700]"
+                className="nav-link block pt-2 px-1 text-[#ffffff] hover:text-[#ffffff] border-b-4 border-transparent  font-[700]"
               >
                 Our Work
               </a>
@@ -80,7 +81,7 @@ const Header = () => {
             <li>
               <a
                 href="#products"
-                className="block pt-2 px-1 text-[#ffffff] hover:text-[#ffffff] border-b-4 border-transparent hover:border-[#911A57] font-[700]"
+                className="nav-link block pt-2 px-1 text-[#ffffff] hover:text-[#ffffff] border-b-4 border-transparent  font-[700]"
               >
                 Our Process
               </a>
@@ -88,7 +89,7 @@ const Header = () => {
             <li>
               <a
                 href="#services"
-                className="block pt-2 px-1 text-[#ffffff] hover:text-[#ffffff] border-b-4 border-transparent hover:border-[#911A57] font-[700]"
+                className="nav-link block pt-2 px-1 text-[#ffffff] hover:text-[#ffffff] border-b-4 border-transparent font-[700]"
               >
                 Blog
               </a>

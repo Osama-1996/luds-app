@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Video from "../../assets/video/banner.mp4";
-import AnimatedCursor from "react-animated-cursor";
 
 const HomePage = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -30,17 +29,17 @@ const HomePage = () => {
                         <a href="#products">
                             <button
                                 type="button"
-                                className="text-[#ffffff] bg-[#8D8D8D6E] hover:opacity-75 focus:outline-none font-medium rounded-full text-md px-7 py-1.5 text-center border-2 border-[#5f6464] mr-4 button-animation"
+                                className="button text-[#ffffff] bg-[#8D8D8D6E] hover:opacity-75 focus:outline-none font-medium rounded-full text-md px-7 py-1 text-center border-2 border-[#5f6464] mr-4"
                             >
-                                Let's Talk
+                                <span className="button-text">Let's Talk</span>
                             </button>
                         </a>
                         <button
                             onClick={toggleModal}
-                            className="text-[#ffffff] bg-[#911a57] hover:opacity-75 focus:outline-none font-medium rounded-full text-md px-7 py-1.5 text-center border-2 border-[#911a57] mr-4 button-animation"
+                            className="button text-[#ffffff] bg-[#911a57] hover:opacity-75 focus:outline-none font-medium rounded-full text-md px-7 py-1 text-center border-2 border-[#911a57] mr-4"
                             type="button"
                         >
-                           Learn more
+                            <span className="button-text">Learn more</span>
                         </button>
                     </div>
                 </div>
