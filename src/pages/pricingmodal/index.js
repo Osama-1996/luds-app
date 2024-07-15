@@ -73,7 +73,7 @@ const PricingModel = () => {
                 </div>
 
 
-                <div className="w-full md:w-[49%] mt-3" data-aos="fade-down">
+                <div className="w-full md:w-[49%] mt-3 h-full " data-aos="fade-down">
                     <div className="flex justify-center mb-8">
                         <div className="bg-[#393939] p-1 rounded-full inline-flex">
                             {tabs.map((tab, index) => (

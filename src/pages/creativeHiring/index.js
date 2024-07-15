@@ -2,7 +2,7 @@ import React from 'react';
 
 const CreativeHiring = () => {
     return (
-        <div className="py-16  flex flex-col xl:flex-row lg:flex-row md:flex-row sm:flex-col xs:flex-col items-center justify-center min-h-screen bg-gradient-to-b from-[#0B0B0B] to-[#911A57] ps-12 pe-7">
+        <div className="py-16  flex flex-col xl:flex-row lg:flex-row md:flex-row sm:flex-col xs:flex-col items-center justify-center min-h-screen bg-gradient-to-b from-[#0B0B0B] to-[#601d3fe3] ps-12 pe-7">
             <div className="w-[90%] md:w-[40%] rounded-lg h-[400px] md:h-[550px] me-8   mt-5" data-aos="zoom-in-down">
                 <img
                     src="https://via.placeholder.com/600x400"

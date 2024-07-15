@@ -30,7 +30,7 @@ const teamMembers = [
 
 const TeamSection = () => {
     return (
-        <div className="flex flex-col items-center bg-[#911A57] py-12">
+        <div className="flex flex-col items-center bg-[#601d3fe3] py-12">
             <h2 className="border-b-4 border-[#911A57] text-white text-3xl xl:text-5xl lg:text-5xl md:text-4xl sm:text-3xl xs:text-3xl font-bold mb-14 mt-3" data-aos="fade-down">
                 OUR TEAM
             </h2>
