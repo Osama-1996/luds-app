@@ -86,7 +86,7 @@ const MeetingDate = () => {
   };
 
   return (
-    <div className="bg-black px-16 flex flex-col md:flex-row justify-center md:justify-between pt-4 md:pt-16 relative">
+    <div className="bg-black px-4 sm:px-6 lg:px-8 xl:px-16 flex flex-col md:flex-row justify-center md:justify-between pt-4 md:pt-16 relative">
       {/* Dark overlay for Gmail compose */}
       {loading && (
         <div
@@ -118,15 +118,15 @@ const MeetingDate = () => {
             <span className="text-lg font-medium">{months[currentMonth]}</span>
             <button onClick={() => changeMonth(1)} className="p-2 bg-gray-200 rounded-lg">Next Month</button>
           </div>
-          <div className="flex">
+          <div className="flex flex-col md:flex-row">
             {/* Calendar */}
-            <div className="flex-grow mr-6">
+            <div className="flex-grow mr-6 mb-4 md:mb-0">
               <div className="grid grid-cols-7 gap-2">
                 {dates.map(date => (
                   <button
                     key={date}
                     onClick={() => setSelectedDate(date)}
-                    className={`py-2 px-4 rounded-full ${
+                    className={` flex justify-center py-2 px-4 rounded-full ${
                       selectedDate === date ? 'bg-blue-500 text-white' : 'bg-gray-200'
                     }`}
                     disabled={emailSent} // Disable calendar buttons if email was sent
