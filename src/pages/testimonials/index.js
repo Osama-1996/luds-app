@@ -62,11 +62,17 @@ const TestimonialsCarousel = () => {
 
     return (
         <div className="w-full overflow-x-hidden py-8 bg-black text-center">
-            <h2 className="text-center text-[48px] font-[600] mb-12 border-b-4 border-[#911A57] text-white inline-flex" data-aos="fade-down">TESTIMONIALS</h2>
+            <h2 className="text-center text-[48px] font-[600] mb-1  text-white" data-aos="fade-down">TESTIMONIALS</h2>
+            <div className='flex justify-center w-full'>
+                <div className='h-[10px] w-[350px] bg-[#601d3fe3] rounded-full mb-16'>
+
+                </div>
+            </div>
+
             <Slider {...settings} className='px-2 xl:px-16' >
                 {testimonials.map((testimonial, index) => (
                     <div key={index} className={`px-7 ${index % 3 === 1 ? 'lg:mt-0 mt-0' : 'lg:mt-16 mt-16'}`} data-aos="zoom-in">
-                        <div className="bg-white rounded-lg py-8 shadow-lg text-center h-full xl:h-[400px]" >
+                        <div className="bg-white rounded-lg py-8 shadow-lg text-center h-full pb-4" >
                             <div className='flex justify-start'>
                                 <img src={Comma} alt='' className='w-[90px] ' />
                             </div>

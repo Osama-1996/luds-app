@@ -1,68 +1,83 @@
 import React from 'react';
-import Arrow from "../../assets/images/nextarrow.svg";
-
+import { useNavigate } from 'react-router-dom';
+import Person1 from "../../assets/images/person1.jpg"
+import Person2 from "../../assets/images/person2.jpeg"
+import Person3 from "../../assets/images/person3.webp"
+import Person4 from "../../assets/images/person4.avif"
 const teamMembers = [
-    {
-        title: 'Video Editors',
-        description: 'Hire an expert video editor in your niche who exactly understands what your visual needs are',
-        buttonText: 'Learn more',
-        imgSrc: 'https://via.placeholder.com/150'
-    },
-    {
-        title: 'Motion Graphic Designers',
-        description: 'Hire an expert motion graphic designer to create visually captivating animations, transitions, and visual effects for your company and clients',
-        buttonText: 'Learn more',
-        imgSrc: 'https://via.placeholder.com/150'
-    },
-    {
-        title: '3D Animators',
-        description: 'Hire an expert 3D animator who understands everything in and out about your project. From 3D modelling to rigging and their animations. We’ve got every base covered.',
-        buttonText: 'Learn more',
-        imgSrc: 'https://via.placeholder.com/150'
-    },
-    {
-        title: '2D Animators',
-        description: 'Hire an expert 2D animator to take care of all your 2D animation needs. From storyboarding to illustration and then the animations, our experts are ready to make your next project a reality.',
-        buttonText: 'Learn more',
-        imgSrc: 'https://via.placeholder.com/150'
-    }
+  {
+    name: 'Person 1',
+    role: 'Video Editor',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi euismod enim et volutpat ornare.',
+    image: Person1, // Replace with the actual image URL or file path
+    route: "/video-details"
+  },
+  {
+    name: 'Person 2',
+    role: '2D Animator',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi euismod enim et volutpat ornare.',
+    image: Person2, // Replace with the actual image URL or file path
+    route: "/2danimation-details"
+  },
+  {
+    name: 'Person 3',
+    role: '3D Animator',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi euismod enim et volutpat ornare.',
+    image: Person3, // Replace with the actual image URL or file path
+    route: "/3danimation-details"
+  },
+  {
+    name: 'Person 4',
+    role: 'Motion Graphic Artist',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi euismod enim et volutpat ornare.',
+    image: Person4, // Replace with the actual image URL or file path
+    route: "/motiongraphic-details"
+  },
 ];
 
-const TeamSection = () => {
-    return (
-        <div className="flex flex-col items-center bg-[#601d3fe3] py-12">
-            <h2 className="border-b-4 border-[#911A57] text-white text-3xl xl:text-5xl lg:text-5xl md:text-4xl sm:text-3xl xs:text-3xl font-bold mb-14 mt-3" data-aos="fade-down">
-                OUR TEAM
-            </h2>
-            <div className="grid gap-8 px-16 
-                xl:grid-cols-4 lg:grid-cols-4 
-                md:grid-cols-2 sm:grid-cols-2 
-                xs:grid-cols-1" data-aos="zoom-in-up">
-                {teamMembers.map((member, index) => (
-                    <div
-                        key={index}
-                        className="flex flex-col items-center rounded-xl overflow-hidden"
-                    >
-                        <img
-                            src={member.imgSrc}
-                            alt={member.title}
-                            className="w-full h-[350px] object-cover rounded-xl"
-                        />
-                        <div className="flex flex-col p-4">
-                            <h3 className="text-[20px] sm:text-[25px] md:text-[28px] lg:text-[32px] xl:text-[35px] font-[700] text-white mb-2 text-center">{member.title}</h3>
-                            <p className="text-[15px] font-[300] text-white mb-4 text-center">{member.description}</p>
-                            <button className="button flex items-center bg-[#333333] text-[16px] font-[600] text-white px-4 py-2 rounded-full hover:bg-gray-700 mx-auto">
-                              <span className="button-text"> {member.buttonText}</span> 
-                                <div className='rounded-full bg-[#727272] p-1 ms-2 button-text'>
-                                    <img src={Arrow} alt='Arrow' />
-                                </div>
-                            </button>
-                        </div>
-                    </div>
-                ))}
-            </div>
+const Team = () => {
+  const navigate = useNavigate()
+  return (
+    <section className=" py-16">
+      <div className="max-w-7xl mx-auto text-center">
+        <div className='flex flex-col items-center justify-center pt-4'>
+          <h2 className="text-[30px] md:text-[47px] font-extrabold text-center text-white ">
+            Our Team
+          </h2>
+          <div className='h-[10px] w-[247px] bg-[#601d3fe3] rounded-full'>
+
+          </div>
         </div>
-    );
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pt-14">
+          {teamMembers.map((member, index) => (
+            <div
+              key={index}
+              data-aos="zoom-in"
+              onClick={() =>
+                navigate(member.route)
+              }
+              className="bg-[#6e6969] p-6 rounded-lg text-white shadow-lg hover:shadow-2xl transition-shadow duration-300"
+            >
+              <div className="rounded-full overflow-hidden w-32 h-32 mx-auto mb-6">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="object-cover w-full h-full"
+                />
+              </div>
+              <h3 className="text-xl font-bold mb-2">{member.name}</h3>
+              <p className="text-md text-gray-300 font-bold mb-4">{member.role}</p>
+              <p className="text-sm">{member.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
 
-export default TeamSection;
+export default Team;

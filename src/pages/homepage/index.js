@@ -1,6 +1,17 @@
 import React, { useState } from 'react';
 import Video from "../../assets/video/banner.mp4";
-
+import Header from '../../components/header';
+import Process from '../../pages/process/process';
+import TestimonialsCarousel from '../../pages/testimonials';
+import TechnologyStacks from "../../pages/technologyStack"
+import MeetingDate from '../../pages/meetingDate';
+import Contactus from '../../pages/contactUs';
+import CreativeHiring from '../../pages/creativeHiring';
+import PricingModel from '../../pages/pricingmodal';
+import ProblemSolution from '../../pages/problemSolution';
+import OurTeamPage from '../../pages/ourTeamPage';
+import Footer from '../../components/footer';
+import Hero from "../../assets/images/hero (2).png"
 const HomePage = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -10,39 +21,42 @@ const HomePage = () => {
 
     return (
         <>
+            <Header />
             <div className="relative h-screen overflow-hidden">
-                <video
+                {/* <img
                     className="absolute top-0 left-0 w-full h-full object-cover"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
+                    src="150x150"
                 >
-                    <source src={Video} type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
-                <div className="absolute inset-0 bg-black opacity-50"></div>
-                <div className="relative z-10 flex flex-col justify-center h-full text-white pt-10 px-[10px] md:px-[80px]" data-aos="fade-right">
-                    <h1 className="text-[28px] md:text-[64px] text-[#911A57] font-[800] m-0">Level Up Design Studios</h1>
-                    <p className="text-[23px] font-[600] w-full sm:w-[90%] md:w-[60%] my-0 py-3">Focus on your business and let us take care of all your editing and animation needs.</p>
-                    <div className="flex mt-5">
-                        <a href="#products">
-                            <button
-                                type="button"
-                                className="button text-[#ffffff] bg-[#8D8D8D6E] hover:opacity-75 focus:outline-none font-medium rounded-full text-md px-7 py-1 text-center border-2 border-[#5f6464] mr-4"
-                            >
-                                <span className="button-text">Let's Talk</span>
-                            </button>
-                        </a>
-                        <button
+
+                </img> */}
+                <div className="absolute inset-0 bg-black opacity-50 "></div>
+                <div className="flex items-center">
+                    <div className="relative z-10 flex flex-col justify-center h-full text-white  px-[10px] md:px-[50px] leading-[60px] justify-center pt-[160px] mt-16" data-aos="fade-right">
+                        <h1 className="text-[28px] md:text-[57px] text-[#911A57] font-[800] m-0">Level Up Design Studios <br /><span className='text-[20px] md:text-[40px] text-white'>Empowering Creativity with AI</span></h1>
+                        <p className="text-[20px] font-[600] w-full  my-0 py-1">Hire Top-Tier, Pre-Vetted <b>Editors</b> ,<b> Motion Graphic Artists</b>, and <b>Animators</b> </p>
+                        <div className="flex mt-5">
+                            <a href="#products">
+                                <button
+                                    type="button"
+                                    className="button text-black bg-[#FFFFFF] hover:opacity-75 focus:outline-none font-medium rounded-md text-sm px-6 py-5 text-center mr-4"
+                                >
+                                    <span className="button-text">CHECK OUR SERVICES</span>
+                                </button>
+                            </a>
+                            {/* <button
                             onClick={toggleModal}
                             className="button text-[#ffffff] bg-[#911a57] hover:opacity-75 focus:outline-none font-medium rounded-full text-md px-7 py-1 text-center border-2 border-[#911a57] mr-4"
                             type="button"
                         >
                             <span className="button-text">Learn more</span>
-                        </button>
+                        </button> */}
+                        </div>
+                    </div>
+                    <div className='relative z-10 flex flex-col justify-center items-center h-full text-white justify-center pt-16 mt-16 '>
+                        <img src={Hero} alt='' className='w-[400px] h-[400px] me-10'/>
                     </div>
                 </div>
+
             </div>
 
             {isModalOpen && (
@@ -71,6 +85,16 @@ const HomePage = () => {
                     </div>
                 </div>
             )}
+            <CreativeHiring />
+            <Process />
+            <OurTeamPage />
+            <PricingModel />
+            <ProblemSolution />
+            <TestimonialsCarousel />
+            <TechnologyStacks />
+            <MeetingDate />
+            <Contactus />
+            <Footer />
         </>
     );
 };

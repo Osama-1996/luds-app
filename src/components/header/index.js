@@ -8,19 +8,10 @@ const Header = () => {
     <nav className="w-full bg-transparent absolute z-20 top-0">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-3 px-4">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src={Logo} className="w-[160px] h-[80px]" alt="Logo" />
+          {/* <img src={Logo} className="w-[160px] h-[80px]" alt="Logo" /> */}
         </a>
-        <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-          <div className="flex">
-            <a href="#products">
-              <button
-                type="button"
-                className="button text-[#ffffff] bg-[#5f6464] focus:outline-none font-medium rounded-full text-md px-7 py-1 text-center border-2 border-[#5f6464]"
-              >
-                <span className="button-text">Contact Us</span>
-              </button>
-            </a>
-          </div>
+        <div className="flex  space-x-3 ">
+
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             type="button"
@@ -47,9 +38,8 @@ const Header = () => {
           </button>
         </div>
         <div
-          className={`items-center justify-between ${
-            menuOpen ? "block bg-black" : "hidden"
-          } w-full md:flex md:w-auto md:order-1 ps-2`}
+          className={`items-center justify-between ${menuOpen ? "block bg-black" : "hidden"
+            } w-full md:flex md:w-auto md:order-1 ps-2`}
           id="navbar-sticky"
         >
           <ul className="flex flex-col px-4 items-center font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
@@ -94,6 +84,16 @@ const Header = () => {
                 Blog
               </a>
             </li>
+            <div className="flex">
+              <a href="#products">
+                <button
+                  type="button"
+                  className="bg-gradient-to-r from-pink-500 to-purple-500 text-white font-semibold rounded-md text-md px-8 py-3 text-center"
+                >
+                  Get Started
+                </button>
+              </a>
+            </div>
           </ul>
         </div>
       </div>
